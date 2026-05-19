@@ -1,0 +1,397 @@
+mqtt:
+  sensor:
+    - name: "当前温度"
+      unique_id: "dryer_current_temp"
+      state_topic: "dryer/state/temp"
+      unit_of_measurement: "°C"
+      device_class: temperature
+      icon: "mdi:thermometer-check"
+      device:
+        name: "AMS Lite Dryer"
+        identifiers: ["amslite_dryer_001"]
+        suggested_area: "书房"
+        manufacturer: "Custom"
+        model: "AMS Lite Dryer"
+        sw_version: "1.0.0"
+
+    - name: "仓温"
+      unique_id: "dryer_chamber_temp"
+      state_topic: "dryer/state/chamber_temp"
+      unit_of_measurement: "°C"
+      device_class: temperature
+      icon: "mdi:thermometer-check"
+      device:
+        identifiers: ["amslite_dryer_001"]
+
+    - name: "AHT30温度"
+      unique_id: "dryer_aht30_temp"
+      state_topic: "dryer/state/aht30_temp"
+      unit_of_measurement: "°C"
+      device_class: temperature
+      icon: "mdi:thermometer-check"
+      device:
+        identifiers: ["amslite_dryer_001"]
+
+    - name: "AHT30湿度"
+      unique_id: "dryer_aht30_humidity"
+      state_topic: "dryer/state/aht30_humidity"
+      unit_of_measurement: "%"
+      device_class: humidity
+      icon: "mdi:water-percent"
+      device:
+        identifiers: ["amslite_dryer_001"]
+
+    - name: "目标温度"
+      unique_id: "dryer_target_temp"
+      state_topic: "dryer/state/target_temp"
+      unit_of_measurement: "°C"
+      device_class: temperature
+      icon: "mdi:thermometer-chevron-up"
+      device:
+        identifiers: ["amslite_dryer_001"]
+
+    - name: "烘干时间"
+      unique_id: "dryer_set_time"
+      state_topic: "dryer/state/time"
+      unit_of_measurement: "min"
+      icon: "mdi:clock"
+      device:
+        identifiers: ["amslite_dryer_001"]
+
+    - name: "剩余时间"
+      unique_id: "dryer_remaining_time"
+      state_topic: "dryer/state/remaining"
+      unit_of_measurement: "s"
+      icon: "mdi:clock"
+      device:
+        identifiers: ["amslite_dryer_001"]
+      
+    - name: "当前状态"
+      unique_id: "dryer_status"
+      state_topic: "dryer/state/status"
+      icon: "mdi:tumble-dryer"
+      device:
+        identifiers: ["amslite_dryer_001"]
+      
+    - name: "PID参数"
+      unique_id: "dryer_pid_params"
+      state_topic: "dryer/state/pid"
+      icon: "mdi:chip"
+      device:
+        identifiers: ["amslite_dryer_001"]
+
+    - name: "警告信息"
+      unique_id: "dryer_alerts"
+      state_topic: "dryer/alerts"
+      icon: "mdi:alert"
+      device:
+        identifiers: ["amslite_dryer_001"]
+
+    - name: "设备IP"
+      unique_id: "dryer_ip"
+      state_topic: "dryer/state/ip"
+      icon: "mdi:ip"
+      device:
+        identifiers: ["amslite_dryer_001"]
+
+    - name: "排气阀状态"
+      unique_id: "dryer_exhaust_state"
+      state_topic: "dryer/state/exhaust"
+      icon: "mdi:valve"
+      device:
+        identifiers: ["amslite_dryer_001"]
+
+    - name: "排气阀方向"
+      unique_id: "dryer_exhaust_direction"
+      state_topic: "dryer/state/exhaust_dir"
+      icon: "mdi:swap-horizontal"
+      device:
+        identifiers: ["amslite_dryer_001"]
+
+    - name: "CPU使用率"
+      unique_id: "dryer_cpu_usage"
+      state_topic: "dryer/state/cpu_usage"
+      unit_of_measurement: "%"
+      icon: "mdi:cpu-32-bit"
+      device:
+        identifiers: ["amslite_dryer_001"]
+
+    - name: "RAM使用率"
+      unique_id: "dryer_ram_usage"
+      state_topic: "dryer/state/ram_usage"
+      unit_of_measurement: "%"
+      icon: "mdi:memory"
+      device:
+        identifiers: ["amslite_dryer_001"]
+
+    - name: "RAM已用"
+      unique_id: "dryer_ram_used"
+      state_topic: "dryer/state/ram_used"
+      unit_of_measurement: "MB"
+      icon: "mdi:memory"
+      device:
+        identifiers: ["amslite_dryer_001"]
+
+    - name: "RAM总量"
+      unique_id: "dryer_ram_total"
+      state_topic: "dryer/state/ram_total"
+      unit_of_measurement: "MB"
+      icon: "mdi:memory"
+      device:
+        identifiers: ["amslite_dryer_001"]
+
+    - name: "PSRAM使用率"
+      unique_id: "dryer_psram_usage"
+      state_topic: "dryer/state/psram_usage"
+      unit_of_measurement: "%"
+      icon: "mdi:memory"
+      device:
+        identifiers: ["amslite_dryer_001"]
+
+    - name: "PSRAM已用"
+      unique_id: "dryer_psram_used"
+      state_topic: "dryer/state/psram_used"
+      unit_of_measurement: "MB"
+      icon: "mdi:memory"
+      device:
+        identifiers: ["amslite_dryer_001"]
+
+    - name: "PSRAM总量"
+      unique_id: "dryer_psram_total"
+      state_topic: "dryer/state/psram_total"
+      unit_of_measurement: "MB"
+      icon: "mdi:memory"
+      device:
+        identifiers: ["amslite_dryer_001"]
+
+    - name: "Flash使用率"
+      unique_id: "dryer_flash_usage"
+      state_topic: "dryer/state/flash_usage"
+      unit_of_measurement: "%"
+      icon: "mdi:database"
+      device:
+        identifiers: ["amslite_dryer_001"]
+
+    - name: "Flash已用"
+      unique_id: "dryer_flash_used"
+      state_topic: "dryer/state/flash_used"
+      unit_of_measurement: "MB"
+      icon: "mdi:database"
+      device:
+        identifiers: ["amslite_dryer_001"]
+
+    - name: "Flash总量"
+      unique_id: "dryer_flash_total"
+      state_topic: "dryer/state/flash_total"
+      unit_of_measurement: "MB"
+      icon: "mdi:database"
+      device:
+        identifiers: ["amslite_dryer_001"]
+      
+  select:
+    - name: "预设材料"
+      unique_id: "dryer_material"
+      command_topic: "dryer/control/mode"
+      state_topic: "dryer/state/mode"
+      icon: "fapro:filament-2"
+      options:
+        - "CUSTOM"
+        - "PLA"
+        - "PETG"
+        - "ABS"
+        - "ASA"
+        - "PA"
+      device:
+        identifiers: ["amslite_dryer_001"]
+
+    - name: "排气阀控制模式"
+      unique_id: "dryer_exhaust_mode_select"
+      command_topic: "dryer/control/exhaust_mode"
+      state_topic: "dryer/state/exhaust_mode"
+      options:
+        - "AUTO"
+        - "MANUAL"
+      icon: "mdi:swap-horizontal-bold"
+      device:
+        identifiers: ["amslite_dryer_001"]
+
+  switch:
+    - name: "自动烘干(根据湿度)"
+      unique_id: "dryer_auto_dry_switch"
+      command_topic: "dryer/control/auto_dry_enable"
+      state_topic: "dryer/state/auto_dry_enable"
+      payload_on: "ON"
+      payload_off: "OFF"
+      icon: "mdi:water-percent"
+      device:
+        identifiers: ["amslite_dryer_001"]
+        
+  number:
+    - name: "温度设定"
+      unique_id: "dryer_temperature"
+      command_topic: "dryer/control/temp"
+      state_topic: "dryer/state/target_temp"
+      min: 40
+      max: 100
+      step: 5
+      unit_of_measurement: "°C"
+      icon: "mdi:thermometer-auto"
+      device:
+        identifiers: ["amslite_dryer_001"]
+      
+    - name: "时间设定"
+      unique_id: "dryer_time"
+      command_topic: "dryer/control/time"
+      state_topic: "dryer/state/time"
+      min: 0
+      max: 1440
+      step: 30
+      unit_of_measurement: "min"
+      icon: "mdi:timer-edit"
+      device:
+        identifiers: ["amslite_dryer_001"]
+
+    - name: "风速设定"
+      unique_id: "dryer_fan_speed"
+      command_topic: "dryer/control/fan"
+      state_topic: "dryer/state/fan"
+      min: 39
+      max: 100
+      step: 1
+      unit_of_measurement: "%"
+      icon: "mdi:fan"
+      device:
+        identifiers: ["amslite_dryer_001"]
+
+    - name: "排气阀动作时间"
+      unique_id: "dryer_exhaust_time_number"
+      command_topic: "dryer/control/exhaust_time"
+      state_topic: "dryer/state/exhaust_time"
+      min: 3000
+      max: 20000
+      step: 100
+      unit_of_measurement: "ms"
+      icon: "mdi:timer-cog-outline"
+      device:
+        identifiers: ["amslite_dryer_001"]
+
+    - name: "排气首次启动延迟"
+      unique_id: "dryer_exhaust_first_delay"
+      command_topic: "dryer/control/exhaust_first_delay"
+      state_topic: "dryer/state/exhaust_first_delay"
+      min: 0
+      max: 300
+      step: 1
+      unit_of_measurement: "min"
+      icon: "mdi:timer-sand"
+      device:
+        identifiers: ["amslite_dryer_001"]
+
+    - name: "排气开启时长"
+      unique_id: "dryer_exhaust_on_duration"
+      command_topic: "dryer/control/exhaust_on_duration"
+      state_topic: "dryer/state/exhaust_on_duration"
+      min: 1
+      max: 300
+      step: 1
+      unit_of_measurement: "min"
+      icon: "mdi:timer-play"
+      device:
+        identifiers: ["amslite_dryer_001"]
+
+    - name: "排气关闭时长"
+      unique_id: "dryer_exhaust_off_duration"
+      command_topic: "dryer/control/exhaust_off_duration"
+      state_topic: "dryer/state/exhaust_off_duration"
+      min: 1
+      max: 300
+      step: 1
+      unit_of_measurement: "min"
+      icon: "mdi:timer-off"
+      device:
+        identifiers: ["amslite_dryer_001"]
+
+    - name: "自动烘干开始湿度"
+      unique_id: "dryer_auto_dry_start"
+      command_topic: "dryer/control/auto_dry_start"
+      state_topic: "dryer/state/auto_dry_start"
+      min: 0
+      max: 100
+      step: 0.5
+      unit_of_measurement: "%"
+      icon: "mdi:water-plus"
+      device:
+        identifiers: ["amslite_dryer_001"]
+
+    - name: "自动烘干运行时间"
+      unique_id: "dryer_auto_dry_duration"
+      command_topic: "dryer/control/auto_dry_duration"
+      state_topic: "dryer/state/auto_dry_duration"
+      min: 1
+      max: 1440
+      step: 1
+      unit_of_measurement: "min"
+      icon: "mdi:timer"
+      device:
+        identifiers: ["amslite_dryer_001"]
+
+    - name: "自动烘干手动停止后的cd时间"
+      unique_id: "dryer_auto_dry_cooldown"
+      command_topic: "dryer/control/auto_dry_cooldown"
+      state_topic: "dryer/state/auto_dry_cooldown"
+      min: 0
+      max: 1440
+      step: 1
+      unit_of_measurement: "min"
+      icon: "mdi:timer-lock"
+      device:
+        identifiers: ["amslite_dryer_001"]
+      
+  button:     
+    - name: "开始烘干"
+      unique_id: "dryer_start"
+      command_topic: "dryer/control/power"
+      payload_press: ""
+      icon: "mdi:heat-wave"
+      device:
+        identifiers: ["amslite_dryer_001"]
+        
+    - name: "结束烘干"
+      unique_id: "dryer_stop"
+      command_topic: "dryer/control/stop"
+      payload_press: ""
+      icon: "mdi:stop"
+      device:
+        identifiers: ["amslite_dryer_001"]
+    
+    - name: "PID自动整定"
+      unique_id: "dryer_autotune"
+      command_topic: "dryer/control/autotune"
+      payload_press: "START"
+      icon: "mdi:auto-fix"
+      device:
+        identifiers: ["amslite_dryer_001"]
+
+    - name: "排气阀打开"
+      unique_id: "dryer_exhaust_open"
+      command_topic: "dryer/control/exhaust"
+      payload_press: "OPEN"
+      icon: "mdi:valve-open"
+      device:
+        identifiers: ["amslite_dryer_001"]
+
+    - name: "排气阀关闭"
+      unique_id: "dryer_exhaust_close"
+      command_topic: "dryer/control/exhaust"
+      payload_press: "CLOSE"
+      icon: "mdi:valve-closed"
+      device:
+        identifiers: ["amslite_dryer_001"]
+
+    - name: "排气阀切换方向"
+      unique_id: "dryer_exhaust_toggle_direction"
+      command_topic: "dryer/control/exhaust"
+      payload_press: "TOGGLE_DIRECTION"
+      icon: "mdi:swap-horizontal"
+      device:
+        identifiers: ["amslite_dryer_001"]
