@@ -1,6 +1,10 @@
 # AMS Lite 智能烘干器
 
 基于 ESP32-S3 的 3D 打印耗材智能烘干器固件，支持精确温度控制、自动除湿、远程监控等功能。
+- [B站视频链接](https://www.bilibili.com/video/BV1hrrPBKE2C)
+- [嘉立创开源硬件平台](https://oshwhub.com/soughtquinee/ams-lite-dryer)
+- [makerworld中国区模型文件](https://makerworld.com.cn/zh/models/1992331-gua-pei-ams-litefeng-xiang-de-zhi-neng-hong-gan-qi#profileId-2218450)
+- [makerworld国际区模型文件](https://makerworld.com/zh/models/2220547-smart-dryer-for-ams-lite-enclosure#profileId-2414835)
 
 ## 功能特性
 
