@@ -8,10 +8,10 @@
 
 # 烧录说明
 - 老版本都反馈烧录后一直频繁重启，1.0.5版本修复了这个问题。
-- 需要同时烧录`bootloader.bin`、`partitions.bin`、`烘干器V1.0.5-8MB.bin`三个文件
+- 需要同时烧录`bootloader.bin`、`partitions.bin`、`烘干器V1.0.5.bin`三个文件
 - 注意烧录位置分别为 `0x0000`、`0x8000`、`0x10000`
 - 烧录软件在release里的1.0.5版本压缩包内，默认已经配置好ESP32-S3的烧录参数，直接选择串口开始烧录即可
-![烧录软件详情](https://s3.bmp.ovh/2026/06/25/QjWIfBVr.png)
+![烧录软件详情](https://image.lceda.cn/oshwhub/pullImage/af2340e5f8864118947dfbce6c297471.png)
 
 # 功能特性
 
