@@ -11,7 +11,7 @@
 - 需要同时烧录`bootloader.bin`、`partitions.bin`、`烘干器V1.0.5.bin`三个文件
 - 注意烧录位置分别为 `0x0000`、`0x8000`、`0x10000`
 - 烧录软件在release里的1.0.5版本压缩包内，默认已经配置好ESP32-S3的烧录参数，直接选择串口开始烧录即可
-![烧录软件详情](https://image.lceda.cn/oshwhub/pullImage/af2340e5f8864118947dfbce6c297471.png)
+![烧录软件详情](https://s3.bmp.ovh/2026/06/25/MH3etcHE.png)
 
 # 功能特性
 
