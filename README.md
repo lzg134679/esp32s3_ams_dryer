@@ -6,6 +6,15 @@
 - [makerworld中国区模型文件](https://makerworld.com.cn/zh/models/1992331-gua-pei-ams-litefeng-xiang-de-zhi-neng-hong-gan-qi#profileId-2218450)
 - [makerworld国际区模型文件](https://makerworld.com/zh/models/2220547-smart-dryer-for-ams-lite-enclosure#profileId-2414835)
 
+# 烧录说明
+- 老版本都反馈烧录后一直频繁重启，1.0.5版本修复了这个问题。
+- 需要同时烧录`bootloader.bin`、`partitions.bin`、`烘干器V1.0.5-8MB.bin`三个文件
+- 注意烧录位置分别为 `0x0000`、`0x8000`、`0x10000`
+- 烧录软件在release里的1.0.5版本压缩包内，默认已经配置好ESP32-S3的烧录参数，直接选择串口开始烧录即可
+![烧录软件详情](https://s3.bmp.ovh/2026/06/25/QjWIfBVr.png)
+
+# 功能特性
+
 ## 功能特性
 
 ### 核心功能
